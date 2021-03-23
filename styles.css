@@ -1,0 +1,206 @@
+:root {
+  --light-grey: #E0E0E0;
+  --lighter-grey: #E8E8E8;
+  --nav-green: #659D32;
+  --nav-hover: #A6D785;
+  --mint-icecream: #B7C8B6;
+  --medium-blue: #3351B7;
+  --hover-blue: #3339B7;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--light-grey);
+}
+
+/* ----- NAV ----- */
+.nav-list {
+  display: flex;
+  flex-direction: row;
+  background-color: black;
+  font-size: 1rem;
+}
+
+.nav-item {
+  padding: 0 1%;
+  list-style-type: none;
+  
+}
+
+.nav-item a, .nav-item a:focus {
+  text-decoration: none;
+  color: var(--mint-icecream);
+}
+
+.nav-item a:hover {
+  color: var(--nav-hover);
+}
+
+#menu-button {
+  display: none;
+}
+
+@media only screen and (max-width: 992px) {
+  .nav-item {
+    float: none;
+  }
+
+  #menu-button {
+    display: inline;
+  }
+
+  .nav-list {
+    display: none;
+  }
+
+  
+  #menu-button:hover+ul.nav-list, .nav-list:hover {
+    display: block;
+  }
+}
+
+/* ----- HOME ----- */
+#main-header {
+  text-align: center;
+}
+
+#home {
+  background-color: var(--mint-icecream);
+  width: 50%;
+  padding: 3% 0;
+  margin: 2% auto;
+  border-radius: 3%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media only screen and (max-width: 992px) {
+  #home {
+    width: 90%;
+  }
+}
+
+#home img {
+  width: 50%;
+  border-radius: 50%;
+  border: 3px solid black;
+}
+
+/* ----- RESUME ----- */
+#resume {
+  margin-left: 3%;
+}
+
+#iframe-div {
+  text-align: center;
+}
+
+iframe {
+  width:50%;
+  height:1000px;
+  overflow:auto;
+}
+
+@media only screen and (max-width: 992px) {
+  iframe {
+    width: 100%;
+  }
+}
+
+/* ----- ACHIEVEMENTS ----- */
+#achievements {
+  margin-left: 3%;
+}
+
+#achievements-section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 5%;
+  width: 90%;
+  margin: auto;
+  padding: 50px 0;
+}
+
+.flex-div {
+  width: 300px;
+  background-color: white;
+  margin-bottom: 50px;
+  padding: 1.5%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.flex-img {
+  width: 100%;
+}
+
+.portfolio-btn {
+  font-size: 0.9em;
+  color: white;
+  background-color: var(--medium-blue);
+  border: none;
+  border-radius: 2px;
+  margin: 20px 0;
+  min-height: 35px;
+}
+
+.portfolio-btn div {
+  margin: 0 20px;
+}
+
+.portfolio-btn:hover {
+  background-color: var(--hover-blue);
+}
+
+/* ----- CONTACT ----- */
+#contact-h1 {
+  text-align: center;
+}
+
+#contact-form {
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5rem;
+  background-color: var(--mint-icecream);
+  width: 30%;
+  padding: 3% 5%;
+  margin: 2% auto;
+  border-radius: 3%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#contact-form label, #contact-form input, #contact-form textarea {
+  margin-bottom: 3%;
+  border-radius: 5px;
+  
+}
+
+input {
+  height: 50px;
+  font-size: 1.5rem;
+  border: 1px solid black;
+}
+
+textarea {
+  font-size: 1.5rem;
+  border: 1px solid black;
+}
+
+#contact-btn {
+  font-size: 1.5rem;
+  height: 50px;
+  width: 30%;
+  margin: auto;
+  background-color: var(--nav-green);
+}
+
+#contact-btn:hover {
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 992px) {
+  #contact-form {
+    width: 80%;
+  }
+}
